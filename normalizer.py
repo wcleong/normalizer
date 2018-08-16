@@ -39,10 +39,13 @@ def validate_address(input):
 
 # Read input as csv
 # csv module will account for commas in address column
-inputstring = csv.reader(fileinput.input())
-# do not process headers
-headers = next(inputstring)
-print(','.join(headers))
+try:
+    inputstring = csv.reader(fileinput.input())
+    # do not process headers
+    headers = next(inputstring)
+    print(','.join(headers))
+except:
+    sys.exit("There was a problem reading from stdin. Please try again.")
 
 
 for line in inputstring:
