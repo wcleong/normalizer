@@ -25,7 +25,7 @@ def convert_to_seconds(input):
     _seconds = _rest[0]
     _ms = _rest[1]
     total = (int(_hours) * 3600) + (int(_mins) * 60) + \
-        int(_seconds) + ((int(_ms)/1000) % 60)
+        int(_seconds) + ((int(_ms)/1000))
     return total
 
 
